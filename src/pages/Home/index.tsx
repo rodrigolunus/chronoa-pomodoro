@@ -1,18 +1,22 @@
+import { useEffect } from 'react';
 import { Container } from '../../components/Container';
 import { Countdown } from '../../components/Countdown';
 import { MainForm } from '../../components/MainForm';
 import { MainTemplate } from '../../templates/MainTemplate';
 
-
 export function Home() {
+ useEffect(() => {
+    document.title = 'Chronoa Pomodoro'
+  },[])
+
   return (
     <MainTemplate>
       <Container>
-        <Countdown  />
+        <Countdown />
       </Container>
 
       <Container>
-        <MainForm  />
+        <MainForm />
       </Container>
     </MainTemplate>
   );
